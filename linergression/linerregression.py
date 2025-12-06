@@ -54,6 +54,7 @@ for epoch in range(epochs):
     l = l.item()
     print(l)
     writer.add_scalar('los',l,epoch+1)
+torch.save(net, 'checkpoint.pth')
 writer.flush()
 writer.close()
 for p in net.parameters():
