@@ -79,6 +79,7 @@ def train():
         print('val_loss: ',val_loss)
     for p in net.parameters():
         print(p)
+    torch.save(net, 'new_line_last.pth')
 
 if __name__ == '__main__':
     train()
